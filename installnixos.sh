@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+gparted
 mount /dev/disk/by-label/nixos /mnt
 mkfs.fat -F 32 -n boot /dev/sdc1
 mkdir -p /mnt/boot
