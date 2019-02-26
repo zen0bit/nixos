@@ -24,9 +24,5 @@
 
   swapDevices = [ ];
 
-  hardware.enableAllFirmware = true;
-  services.xserver.videoDrivers = [ "nvidia" ];
-  hardware.opengl.driSupport32Bit = true;
-
   nix.maxJobs = lib.mkDefault 12;
 }
