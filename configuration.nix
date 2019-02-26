@@ -10,6 +10,10 @@
       ./hardware-configuration.nix
     ];
 
+  # hardware.enableAllFirmware = true;
+   services.xserver.videoDrivers = [ "nvidia" ];
+   hardware.opengl.driSupport32Bit = true;  
+  
   # Use the GRUB 2 boot loader.
   boot.loader.grub.enable = true;
   boot.loader.grub.version = 2;
@@ -29,7 +33,7 @@
   # Select internationalisation properties.
    i18n = {
      consoleFont = "Lat2-Terminus16";
-     consoleKeyMap = "en";
+     consoleKeyMap = "us";
      defaultLocale = "en_US.UTF-8";
    };
 
