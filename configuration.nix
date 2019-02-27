@@ -3,7 +3,7 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, ... }:
-
+  allowUnfree = true;
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -57,16 +57,16 @@
      wine
      nox
      kate
+     make
+     gcc
+     git
+     autoconf
+     automake
+     libtool
+     gettext
+     fakeroot
+     
    ];
-   
-   nixpkgs.config = {
-     allowUnfree = true;
-   };
-   virtualisation = {
-    libvirtd.enable = true;
-    docker.enable = false;
-    virtualbox.host.enable = true;
-   };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
