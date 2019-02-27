@@ -54,9 +54,7 @@
      xarchive
      vlc
      fuse
-     wine
      nox
-     kate
      make
      gcc
      git
