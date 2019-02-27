@@ -57,3 +57,4 @@ if [[ $partitioning = "a" ]]; then
   
   nixos-install --show-trace
   passwd zen
+fi
