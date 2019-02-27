@@ -3,7 +3,7 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, ... }:
-  allowUnfree = true;
+  
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -13,7 +13,7 @@
   # hardware.enableAllFirmware = true;
    services.xserver.videoDrivers = [ "nvidia" ];
    hardware.opengl.driSupport32Bit = true;  
-  
+   allowUnfree = true;
   # Use the GRUB 2 boot loader.
   #boot.loader.grub.enable = true;
   #boot.loader.grub.version = 2;
