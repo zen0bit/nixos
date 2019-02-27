@@ -13,7 +13,7 @@
   # hardware.enableAllFirmware = true;
    services.xserver.videoDrivers = [ "nvidia" ];
    hardware.opengl.driSupport32Bit = true;  
-   allowUnfree = true;
+   nixpkgs.config.allowUnfree = true;
   # Use the GRUB 2 boot loader.
   #boot.loader.grub.enable = true;
   #boot.loader.grub.version = 2;
@@ -37,8 +37,8 @@
   # Select internationalisation properties.
    i18n = {
      consoleFont = "Lat2-Terminus16";
-     consoleKeyMap = "us";
-     defaultLocale = "en_US.UTF-8";
+     consoleKeyMap = "cz";
+     defaultLocale = "cs_CZ.UTF-8";
    };
 
   # Set your time zone.
@@ -55,7 +55,6 @@
      vlc
      fuse
      nox
-     make
      gcc
      git
      autoconf
