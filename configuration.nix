@@ -49,18 +49,11 @@
    environment.systemPackages = with pkgs; [
      wget
      nano
-     firefox
      neofetch
-     xarchive
+     xarchiver
      vlc
+     firefox
      fuse
-     gcc
-     git
-     autoconf
-     automake
-     libtool
-     gettext
-     fakeroot
      kate
      hstr
    ];
@@ -103,8 +96,15 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
    users.users.zen = {
      isNormalUser = true;
-     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-   };
+     uid = 1001;
+     initialPassword = "12";
+     extraGroups = [
+     "wheel"
+     "audio"
+     "video"
+     "game"
+   ];
+  };
 
   # This value determines the NixOS release with which your system is to be
   # compatible, in order to avoid breaking some software such as database
