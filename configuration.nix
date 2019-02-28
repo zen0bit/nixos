@@ -48,7 +48,7 @@
   # $ nix search wget
    environment.systemPackages = with pkgs; [
      wget
-     vim
+     nano
      firefox
      neofetch
      xarchive
@@ -63,6 +63,7 @@
      gettext
      fakeroot
      kate
+     hstr
    ];
 
   # Some programs need SUID wrappers, can be configured further or are
