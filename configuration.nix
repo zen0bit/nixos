@@ -14,18 +14,18 @@
    services.xserver.videoDrivers = [ "nvidia" ];
    hardware.opengl.driSupport32Bit = true;  
    nixpkgs.config.allowUnfree = true;
+  
   # Use the GRUB 2 boot loader.
-   boot.loader.grub.enable = true;
-   boot.loader.grub.version = 2;
+  # boot.loader.grub.enable = true;
+  # boot.loader.grub.version = 2;
   # boot.loader.grub.efiSupport = true;
   # boot.loader.grub.efiInstallAsRemovable = true;
   # boot.loader.efi.efiSysMountPoint = "/boot/efi";
   # Define on which hard drive you want to install Grub.
-   boot.loader.grub.device = "dev/sdc"; # or "nodev" for efi only
-
-  # Use the systemd-boot EFI boot loader.
-  # boot.loader.systemd-boot.enable = true;
-  # boot.loader.efi.canTouchEfiVariables = true;
+  # boot.loader.grub.device = "dev/sdc"; # or "nodev" for efi only
+   Use the systemd-boot EFI boot loader.
+   boot.loader.systemd-boot.enable = true;
+   boot.loader.efi.canTouchEfiVariables = true;
 
    networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -110,6 +110,6 @@
   # compatible, in order to avoid breaking some software such as database
   # servers. You should change this only after NixOS release notes say you
   # should.
-  system.stateVersion = "19.03"; # Did you read the comment?
+  system.stateVersion = "19.09"; # Did you read the comment?
 
 }
