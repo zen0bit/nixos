@@ -90,6 +90,7 @@
      "audio"
      "video"
      "game"
+     "sudo"
    ];
   };
 
