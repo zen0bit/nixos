@@ -57,7 +57,9 @@
      kate
      hstr
    ];
-
+  
+   services.flatpak.enable = true; # Added
+  
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
